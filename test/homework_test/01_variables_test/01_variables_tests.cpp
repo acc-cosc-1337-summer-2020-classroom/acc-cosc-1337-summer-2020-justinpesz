@@ -8,7 +8,8 @@ TEST_CASE("Verify Test Configuration", "verification") {
 
 TEST_CASE("Verify sum_numbers function") 
 {
-	REQUIRE(add_numbers(5, 5) == 10);
-	REQUIRE(add_numbers(10, 10) == 20);
+	REQUIRE(get_sales_tax_amount(100) == 6.75);
+	REQUIRE(get_tip_amount(100, .20) == 20);
+	REQUIRE(get_tip_amount(100, .15) == 15);
 }
 
