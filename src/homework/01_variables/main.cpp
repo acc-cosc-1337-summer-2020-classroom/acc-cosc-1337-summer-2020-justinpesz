@@ -1,8 +1,8 @@
 ﻿#include "variables.h"
 #include<iostream>
-//#include<iomanip>
+#include<iomanip>
 
-using namespace std;
+using std::cin;	using std::cout;
 
 int main()
 {
@@ -18,10 +18,10 @@ int main()
 	double result = get_sales_tax_amount(meal_total);
 	double result2 = get_tip_amount(meal_total, tip_percent);
 
-	cout<<"\nMeal Total: $"<<meal_total<<"\n";
-	cout<<"Sales Tax: $"<<result<<"\n";
-	cout<<"Tip applied: $"<<result2<<"\n";
-	cout<<"Total: $"<<meal_total + result + result2;
+	cout<<"\nMeal Total:  $"<<std::fixed<<std::setprecision(2)<<std::setw(8)<<meal_total<<"\n";
+	cout<<"Sales Tax:   $"<<std::setw(8)<<result<<"\n";
+	cout<<"Tip applied: $"<<std::setw(8)<<result2<<"\n";
+	cout<<"Total Bill:  $"<<std::setw(8)<<meal_total + result + result2;
 
 	return 0;
 }
