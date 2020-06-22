@@ -1,5 +1,10 @@
+#include "dna.h"
+#include<iostream>
+#include<string>
 //write include statements
-
+using std::cin;
+using std::cout;
+using std::string;
 //write using statements
 
 
@@ -12,5 +17,34 @@ user enters a y or Y.
 */
 int main() 
 {
+	int num = 0;
+
+	do
+	{
+		string content = "AGCTATAG";
+		//int size = content.size();
+		//cout<<size;
+
+		cout<<"Enter 1 for Content or 2 for Complement: ";
+		cin>>num;
+
+		if (num == 1)
+		{
+			cout<<"Entered "<<num;
+			//double result = get_gc_content(content);
+
+			//cout << result;		
+		}
+		else if (num == 2)
+		{
+			cout<<"Entered "<<num;
+			//get_dna_complement(string content);
+		}
+		else
+		{
+			cout<<"Invalid selection\n";
+		}
+	}while (!(num == 1 || num == 2));
+
 	return 0;
 }
