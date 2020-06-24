@@ -22,7 +22,7 @@ int main()
 
 	do
 	{
-		string content = "AGCTCTAG";
+		string content = "CCCGGAAAAT";
 		
 		cout<<"Enter 1 for Content or 2 for Complement: ";
 		cin>>num;
@@ -39,18 +39,11 @@ int main()
 			cout << content << "\n";
 			cout << result;
 		}
-		/*else if (num == 3)
-		{
-			//cout<<"Entered "<<num;
-			string result = get_reverse_string(content);
-
-			cout<<result;
-		}*/
 		else
 		{
 			cout<<"Invalid selection\n";
 		}
-	}while (!(num == 1 || num == 2));
+	}while (!(num > 0 || num < 3));
 
 	return 0;
 }

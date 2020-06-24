@@ -2,6 +2,7 @@
 #include<string>
 #include<iostream>
 #include<iomanip>
+#include<bits/stdc++.h>
 
 using std::string;
 using std::cout;
@@ -42,20 +43,14 @@ Write code for function get_reverse_string that
 accepts a string parameter and returns a string reversed.
 */
 
-/*string get_reverse_string(string forward)
-{
-    //int count = 0;
-    //int size = content.size();
-
-    char placeHolder = forward[0];
-    forward.push_back() = placeHolder;
-
-    cout << forward;
-
+string get_reverse_string(string forward)
+{   
+    reverse(forward.begin(), forward.end());
+    
     return forward;
-    //for (std::size_t i=0; i < forward.size(); i++)
 }
-*/
+
+
 
 /*
 Write prototype for function get_dna_complement that
@@ -70,24 +65,27 @@ c. return string
 
 string get_dna_complement(string complement)
 {
-    for (std::size_t i=0; i < complement.size(); i++)
+    string result = get_reverse_string(complement);
+    
+    for (std::size_t i=0; i < result.size(); i++)
     {
-        if (complement[i] == 'A')
+        if (result[i] == 'A')
         {
-            complement[i] = 'T';
+            result[i] = 'T';
         }
-        else if (complement[i] == 'T')
+        else if (result[i] == 'T')
         {
-            complement[i] = 'A';
+            result[i] = 'A';
         }
-        else if (complement[i] == 'G')
+        else if (result[i] == 'G')
         {
-            complement[i] = 'C';
+            result[i] = 'C';
         }
-        else if (complement[1] == 'C')
+        else if (result[i] == 'C')
         {
-            complement[i] = 'G';
+            result[i] = 'G';
         }
     }
-    return complement;
+    
+    return result;
 }
