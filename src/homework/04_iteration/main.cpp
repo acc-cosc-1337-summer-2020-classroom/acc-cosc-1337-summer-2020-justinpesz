@@ -1,6 +1,7 @@
 #include "dna.h"
 #include<iostream>
 #include<string>
+#include<iomanip>
 //write include statements
 using std::cin;
 using std::cout;
