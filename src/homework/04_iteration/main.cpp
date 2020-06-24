@@ -22,25 +22,30 @@ int main()
 
 	do
 	{
-		string content = "AGCTATAG";
-		//int size = content.size();
-		//cout<<size;
-
+		string content = "AGCTCTAG";
+		
 		cout<<"Enter 1 for Content or 2 for Complement: ";
 		cin>>num;
 
 		if (num == 1)
 		{
-			cout<<"Entered "<<num;
-			//double result = get_gc_content(content);
+			double result = get_gc_content(content);
 
-			//cout << result;		
+			cout << result;		
 		}
 		else if (num == 2)
 		{
-			cout<<"Entered "<<num;
-			//get_dna_complement(string content);
+			string result = get_dna_complement(content);
+			cout << content << "\n";
+			cout << result;
 		}
+		/*else if (num == 3)
+		{
+			//cout<<"Entered "<<num;
+			string result = get_reverse_string(content);
+
+			cout<<result;
+		}*/
 		else
 		{
 			cout<<"Invalid selection\n";
