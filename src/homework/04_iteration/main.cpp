@@ -19,10 +19,13 @@ user enters a y or Y.
 int main() 
 {
 	int num = 0;
-
+	
 	do
 	{
-		string content = "CCCGGAAAAT";
+		string content = "";
+
+		cout<<"Enter DNA String: ";
+		cin>>content;
 		
 		cout<<"Enter 1 for Content or 2 for Complement: ";
 		cin>>num;
@@ -31,19 +34,16 @@ int main()
 		{
 			double result = get_gc_content(content);
 
-			cout << result;		
+			cout<<result<<"\n";		
 		}
-		else if (num == 2)
+		if (num == 2)
 		{
 			string result = get_dna_complement(content);
-			cout << content << "\n";
-			cout << result;
+			cout<<content<<"\n";
+			cout<<result<<"\n";
 		}
-		else
-		{
-			cout<<"Invalid selection\n";
-		}
-	}while (!(num > 0 || num < 3));
 
+	}while (num > 0 || num < 3);
+	
 	return 0;
 }
