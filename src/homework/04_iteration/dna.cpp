@@ -14,7 +14,7 @@ Iterate string count Gs and Cs, divide count by string length.
 Return quotient.
 */
 
-double get_gc_content(string& content)
+double get_gc_content(const string& content)
 {
     double count = 0;
     int value = 0;
@@ -45,9 +45,14 @@ accepts a string parameter and returns a string reversed.
 
 string get_reverse_string(string forward)
 {   
-    reverse(forward.begin(), forward.end());
+    string reverse;
+
+    for(std::size_t i=forward.size(); i > 0; --i)
+    {
+        reverse.push_back(forward[i-1]);
+    }
     
-    return forward;
+    return reverse;
 }
 
 
